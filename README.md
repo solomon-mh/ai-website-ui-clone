@@ -1,1 +1,1 @@
-#jibyte website clone using react and tailwind.
+# jibyte website clone using react and tailwindcss.
