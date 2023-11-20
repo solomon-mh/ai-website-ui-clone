@@ -1,17 +1,32 @@
-import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faPlay,
+//   faTimes,
+//   faBoltLightning,
+// } from "@fortawesome/free-solid-svg-icons";
+import Home from "./pages/Home";
+import AiTextGenerator from "./components/features-section/AiTextGenerator";
+import AiImageGenerator from "./components/features-section/AiImageGenerator";
+import AiChatbot from "./components/features-section/AiChatbot";
+import AiSpeechToText from "./components/features-section/AiSpeechToText";
+import AiCodeGenerator from "./components/features-section/AiCodeGenerator";
+// import FeaturesContainer from "./components/FeaturesContainer";
 function App() {
   return (
-    <>
-      <h1 className='text-3xl text-brightRed'>JitByte Website Clone</h1>
-      <h1>
-        <FontAwesomeIcon icon={faPlay} />
-        <br />
-        <FontAwesomeIcon icon={faTimes} />
-      </h1>
-    </>
+    <div className='App overflow-hidden'>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />}>
+            <Route index element={<AiTextGenerator />} />
+            <Route path='/aiimagegenerator' element={<AiImageGenerator />} />
+            <Route path='/aichatbot' element={<AiChatbot />} />
+            <Route path='/aispeechtotext' element={<AiSpeechToText />} />
+            <Route path='/aicodegenerator' element={<AiCodeGenerator />} />
+          </Route>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
