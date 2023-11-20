@@ -1,3 +1,60 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --notification-btn-color: rgba(221, 160, 221, 0.5);
+  --default-notification-btn-color: rgb(117, 117, 211, 0.6);
+}
+body {
+  font-family: "Golos text" sans-serif;
+  background-color: whitesmoke;
+  color: #6f7378;
+  opacity: 0.95;
+  overflow-x: scroll;
+}
+h1 {
+  font-family: sans-serif;
+  color: black;
+  font-weight: bolder;
+  line-height: 78px;
+}
+a {
+  display: inline-block;
+}
+
+/* .navigation {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+} */
+.contact-links {
+  color: #000;
+  margin: 0 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.navlinks {
+  color: #000;
+  margin: 0 6px;
+  padding: 4px 14px;
+  transition: all 0.5s;
+}
+.navlinks:hover {
+  background-color: rgb(184, 194, 203, 0.5);
+  border-radius: 8px;
+}
+.contact-links:first-child {
+  border-radius: 50%;
+  padding: 7px;
+  /* background-color: red; */
+}
+.contact-links:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid transparent;
+}
