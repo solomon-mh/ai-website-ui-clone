@@ -6,15 +6,22 @@
   box-sizing: border-box;
 }
 :root {
-  --notification-btn-color: rgba(221, 160, 221, 0.5);
-  --default-notification-btn-color: rgb(117, 117, 211, 0.6);
+  --notification-btn-color: rgba(221, 160, 221, 0.3);
+  --notification-default-text-color: navy;
+  --notification-btn-color-two: rgb(117, 117, 211, 0.25);
+  --default-notification-btn-color: rgb(117, 117, 211, 0.4);
+  --headers-color: #000;
 }
 body {
   font-family: "Golos text" sans-serif;
-  background-color: whitesmoke;
-  color: #6f7378;
-  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #3a3b3e;
   overflow-x: scroll;
+}
+h1,
+h2,
+h3 {
+  color: var(--headers-color);
 }
 h1 {
   font-family: sans-serif;
