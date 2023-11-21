@@ -9,15 +9,14 @@ const AiTextGenerator = () => {
             name="Say goodbye to writer's block"
             content='AI'
             bgColor={"var(--notification-btn-color)"}
+            textColor='#333'
           />
         </div>
         <h1 className='text-4xl py-6'>Intelligent Writing Assistant</h1>
         <p className='text-lg'>
           Writer is designed to help you{" "}
-          <bold className='font-bold'>
-            generate high-quality texts instantly
-          </bold>
-          , without breaking a sweat. With our intuitive interface and powerful
+          <b className='font-bold'>generate high-quality texts instantly</b>,
+          without breaking a sweat. With our intuitive interface and powerful
           features, you can easily edit, export or publish your AI-generated
           result.
         </p>
