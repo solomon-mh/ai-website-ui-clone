@@ -9,6 +9,7 @@ const AiSpeechToText = () => {
             name='Say goodbye to writer’s block.'
             content='AI'
             bgColor={"var(--notification-btn-color)"}
+            textColor='#333'
           />
         </div>
         <h1 className='text-4xl py-6'>Transcribe your speech into text. </h1>
