@@ -57,7 +57,23 @@
   transform: scale(1.05);
   transition: all 0.3s;
 }
-
+.template-card:hover .template-icon {
+  transform: scale(1.25);
+}
+.selected-template-btn {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #fff;
+  filter: drop-shadow(0 0 6px #dedede);
+}
+.how-it-work:hover .how-it-work-number {
+  background-color: #fff;
+  transform: translateY(-7px) scale(1.09);
+}
+.price-container :first-child() {
+  border: 1px solid;
+  background-color: red;
+}
 /* to {
     background: linear-gradient(120deg, #70acd4, #8469cc, #70acd4);
   }
