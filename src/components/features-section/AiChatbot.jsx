@@ -8,7 +8,8 @@ const AiChatbot = () => {
           <NotificationHeader
             name='Intuitive / Humanlike Chatbot.'
             content='AI'
-            bgColor={"var(--notification-btn-color)"}
+            bgColor='var(--notification-btn-color)'
+            textColor='#333'
           />
         </div>
         <h1 className='text-4xl py-6'>Meet your next virtual assistant. </h1>
