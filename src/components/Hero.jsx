@@ -19,7 +19,11 @@ const Hero = () => {
   });
   return (
     <div className='Hero text-white text-center py-44 opacity-90'>
-      <NotificationHeader name='JiByteAI' content='Unleash the power of AI' />
+      <NotificationHeader
+        name='JiByteAI'
+        content='Unleash the power of AI'
+        textColor='white'
+      />
       <div className=' w-3/5 m-auto px-12'>
         <header>
           <h1 className='text-white text-7.5xl transition-all duration-700'>
