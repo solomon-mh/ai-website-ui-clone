@@ -9,6 +9,7 @@ const AiImageGenerator = () => {
             name='Unleash your creativity'
             content='AI'
             bgColor={"var(--notification-btn-color)"}
+            textColor='#333'
           />
         </div>
         <h1 className='text-4xl py-6'>
