@@ -1,19 +1,7 @@
 import { useState } from "react";
 import NotificationHeader from "../utils/NotificationHeader";
-const FAQ = () => {
-  const faqs = [
-    {
-      id: 1,
-      question: "Question 1",
-      answer: "Answer to Question 1",
-    },
-    {
-      id: 2,
-      question: "Question 2",
-      answer: "Answer to Question 2",
-    },
-    // Add more FAQ items as needed
-  ];
+import { faqs } from "../data/faq";
+const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAnswer = (index) => {
@@ -31,13 +19,18 @@ const FAQ = () => {
       </div>
       <div>
         {faqs.map((faq, index) => (
-          <div key={faq.id} className='faq-item'>
-            <div className='faq-question' onClick={() => toggleAnswer(index)}>
-              <span>{faq.question}</span>
-              <span>{activeIndex === index ? "-" : "+"}</span>
+          <div key={faq.id} className='faq-item md:mx-24'>
+            <div
+              className='faq-question my-4 py-4 pb-6 border-b-2  flex justify-between'
+              onClick={() => toggleAnswer(index)}
+            >
+              <p className='text-lg text-black md:text-xl'>{faq.question}</p>
+              <span className='block w-8 h-8 border-1 border-gray-400 bg-white rounded-full'>
+                {activeIndex === index ? "-" : "+"}
+              </span>
             </div>
             {activeIndex === index && (
-              <div className='faq-answer'>{faq.answer}</div>
+              <div className='faq-answer text-left'>{faq.answer}</div>
             )}
           </div>
         ))}
@@ -46,4 +39,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FAQs;
