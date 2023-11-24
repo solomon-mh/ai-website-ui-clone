@@ -1,13 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { pricingData } from "../data/pricingData";
 import { faCheck, faUnlockAlt } from "@fortawesome/free-solid-svg-icons";
+import { useSearchParams } from "react-router-dom";
 
 const Pricing = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const typeFilter = searchParams.get("name");
+
+  const handleFilterChange = (key, value) => {
+    setSearchParams((prevParams) => {
+      prevParams.set(key, value);
+      return prevParams;
+    });
+  };
+
   const membershipTypes = pricingData.map((pricing) => {
     return (
       <div
         key={pricing.id}
-        className='first:border-1 mt-16 px-4 py-6 rounded-2xl'
+        className={`
+        ${
+          typeFilter == "tokenPacks" || typeFilter == "annualBilling"
+            ? "hidden"
+            : ""
+        }
+        first:border-1 mt-16 px-4 py-6 rounded-2xl`}
       >
         <button className='border-1 w-full rounded my-4'>{pricing.type}</button>
         <div className='price'>
@@ -43,17 +60,51 @@ const Pricing = () => {
           Flexible and affording plans tailored to your needs.
         </p>
       </div>
-      <div className='membership-time-options border-1 py-1 rounded-xl overflow-hidden grid gap-6 md:grid-cols-3'>
-        <button className='py-2  w-full'>Monthly Billing</button>
-        <div className='anual py-2 '>
-          <button>Annual Billing</button>
-          <button className='mx-2 px-3 py- rounded text-blue-800  bg-purple-100'>
+      <div className='membership-time-options border-1 rounded-xl overflow-hidden grid gap-1 md:grid-cols-3 font-semibold text-simpleLight'>
+        <button
+          onClick={() => handleFilterChange("name", "")}
+          className={`
+          ${
+            typeFilter == ""
+              ? "bg-white text-black rounded-lg shadow-2xl shadow-slate-900"
+              : ""
+          }
+          py-3 w-full hover:text-black transition-all duration-300`}
+        >
+          Monthly Billing
+        </button>
+        <button
+          onClick={() => handleFilterChange("name", "annualBilling")}
+          className={`${
+            typeFilter == "annualBilling"
+              ? "bg-white text-black rounded-lg shadow-2xl shadow-slate-900"
+              : ""
+          } py-3 transition-all duration-300 hover:text-black`}
+        >
+          Annual Billing
+          <span className='mx-2 px-3 py-0.5 rounded text-blue-800 bg-purple-100 '>
             Save 20%
-          </button>
-        </div>
-        <button className='py-2  w-full'>Token Packs</button>
+          </span>
+        </button>
+        <button
+          onClick={() => handleFilterChange("name", "tokenPacks")}
+          className={`
+          ${
+            typeFilter == "tokenPacks"
+              ? "bg-white text-black rounded-lg shadow-2xl shadow-slate-900"
+              : ""
+          }
+          py-3 transition-all duration-300 w-full hover:text-black`}
+        >
+          Token Packs
+        </button>
       </div>
-      <div className='price-container grid gap-6 md:grid-cols-3'>
+      <div
+        className={`
+        ${
+          typeFilter == "tokenPacks" ? "bg-red-900" : ""
+        }price-container grid gap-6 md:grid-cols-3`}
+      >
         {membershipTypes}
       </div>
       <div className='flex justify-center items-center mt-12 mb-6'>
