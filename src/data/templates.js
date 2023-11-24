@@ -1,4 +1,10 @@
 import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faMailBulk,
   faMessage,
   faAddressBook,
@@ -14,8 +20,6 @@ import {
   faNoteSticky,
   faBlog,
   faPerson,
-  faPlay,
-  faRetweet,
 } from "@fortawesome/free-solid-svg-icons";
 export const templates = [
   {
@@ -111,7 +115,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Facebook Ads",
-    icon: faPodcast,
+    icon: faFacebook,
     type: "advertisement",
     content:
       "Create high-converting Facebook ads that grab attention. Drive sales and grow your business.",
@@ -120,7 +124,7 @@ export const templates = [
     id: crypto.randomUUID(),
 
     title: "Youtube Video Description",
-    icon: faPlay,
+    icon: faYoutube,
     type: "socialmedia",
     content:
       "Elevate your YouTube content with compelling video descriptions. Generate engaging descriptions effortlessly and increase views.",
@@ -128,7 +132,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Youtube Video Title",
-    icon: faPlay,
+    icon: faYoutube,
     type: "socialmedia",
     content:
       "Get more views with attention-grabbing video titles. Create unique, catchy titles that entice viewers.",
@@ -136,7 +140,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Youtube Video Tag",
-    icon: faPlay,
+    icon: faYoutube,
     type: "socialmedia",
     content:
       "Improve your YouTube video's discoverability with relevant video tags. Boost views and engagement.",
@@ -144,7 +148,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Instagram Captions",
-    icon: faNoteSticky,
+    icon: faInstagram,
     type: "socialmedia",
     content:
       "Elevate your Instagram game with captivating captions. Generate unique captions that engage followers and increase your reach.",
@@ -152,7 +156,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Instagram Hashtags",
-    icon: faNoteSticky,
+    icon: faInstagram,
     type: "socialmedia",
     content:
       "Boost your Instagram reach with relevant hashtags. Generate optimal, trending hashtags and increase your visibility.",
@@ -160,7 +164,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Social Media Post Tweet",
-    icon: faRetweet,
+    icon: faTwitter,
     type: "socialmedia",
     content:
       "Make an impact with every tweet. Generate attention-grabbing social media posts and increase engagement.",
@@ -176,7 +180,7 @@ export const templates = [
   {
     id: crypto.randomUUID(),
     title: "Facebook Headlines",
-    icon: faBlog,
+    icon: faFacebook,
     type: "socialmedia",
     content:
       "Get noticed with attention-grabbing Facebook headlines. Generate unique, clickable headlines that increase engagement and drive traffic.",

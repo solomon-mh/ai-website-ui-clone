@@ -1,11 +1,12 @@
-import FAQ from "../components/FAQ";
+import FAQs from "../components/FAQ";
 import FeaturesContainer from "../components/FeaturesContainer";
-import HalfMoon from "../components/HalfMoon";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import LatestBlogs from "../components/LatestBlogs";
 import Navigation from "../components/Navigation";
 import Pricing from "../components/Pricing";
+// import TestimonialSection from "../components/TestimonialSection";
 import Testimonials from "../components/Testimonials";
 
 const Home = () => {
@@ -16,10 +17,11 @@ const Home = () => {
       <FeaturesContainer />
       <HowItWorks />
       <Testimonials />
+      {/* <TestimonialSection /> */}
       <Pricing />
-      <FAQ />
+      <FAQs />
       <LatestBlogs />
-      <HalfMoon />
+      <Footer />
     </div>
   );
 };
