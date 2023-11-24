@@ -2,7 +2,7 @@ import NotificationHeader from "../../utils/NotificationHeader";
 import chatImage from "../../assets/images/ai-chat.png";
 const AiChatbot = () => {
   return (
-    <div className='grid  grid-cols-2 gap-14 '>
+    <div className='grid md:grid-cols-2 gap-14 '>
       <div className='left-side border-1 rounded-2xl p-8 bg-white'>
         <div className='notf-btn text-black flex justify-start'>
           <NotificationHeader
