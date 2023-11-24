@@ -17,12 +17,14 @@ const JiByteTools = () => {
     );
   });
   return (
-    <div>
+    <div className='text-center my-4'>
       <h1 className='text-6xl py-3'>Jibyte Tools.</h1>
-      <p className='text-xl py-8 font-semibold'>
+      <p className='text-xl pb-12 font-semibold'>
         Jibyte AI provides all of the tools required to create content.
       </p>
-      <div className='tools-card-container grid grid-cols-3 gap-4'>{tools}</div>
+      <div className='tools-card-container grid md:grid-cols-3 gap-4'>
+        {tools}
+      </div>
     </div>
   );
 };
