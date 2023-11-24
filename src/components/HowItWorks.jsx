@@ -18,7 +18,7 @@ const HowItWorks = () => {
       <h1 className='w-3/5 opacity-80 text-white m-auto text-6xl pt-12'>
         So, how does it work?
       </h1>
-      <div className=' grid grid-cols-3 gap-3 my-12'>{items}</div>
+      <div className=' grid px-12 md:grid-cols-3 gap-3 my-12'>{items}</div>
       <div className='join-link'>
         <a className='text-blue-300 opacity-60' href='#'>
           Want to see it? Join Jibyte
