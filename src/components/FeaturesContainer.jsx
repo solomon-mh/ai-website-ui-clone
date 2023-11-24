@@ -4,6 +4,7 @@ import "../styles/component-styling.css";
 import JibyteAiUsers from "./JibyteAiUsers";
 import CustomTemplates from "./CustomTemplates";
 import JiByteTools from "./JiByteTools";
+// import ShowMoreCards from "../utils/ShowMoreCards";
 const FeaturesContainer = () => {
   const activeStyle = {
     background: "white",
@@ -16,7 +17,7 @@ const FeaturesContainer = () => {
     <div>
       <Features />
       <section className='w-90perc m-auto py-20 px-12 border-2 rounded-4xl '>
-        <div className='feature-navs grid grid-cols-5 gap-8 my-8'>
+        <div className='feature-navs grid md:grid-cols-5 gap-8 my-8'>
           <NavLink
             to='/'
             style={({ isActive }) => (isActive ? activeStyle : null)}
@@ -54,14 +55,8 @@ const FeaturesContainer = () => {
           </NavLink>
         </div>
         <Outlet />
-      </section>
-      <section className='w-90perc m-auto py-20 px-12'>
         <JibyteAiUsers />
-      </section>
-      <section className='text-center w-90perc m-auto pb-20 pt-4 px-12 border-2 rounded-4xl'>
         <CustomTemplates />
-      </section>
-      <section className='text-center w-90perc m-auto my-20 pb-12 pt-10 px-12 border-2 rounded-4xl'>
         <JiByteTools />
       </section>
     </div>
