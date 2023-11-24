@@ -7,16 +7,20 @@
 }
 :root {
   --notification-btn-color: rgba(221, 160, 221, 0.3);
+  --lighter-blue-notification-btn-color: rgba(98, 98, 211);
   --notification-default-text-color: navy;
   --notification-btn-color-two: rgb(117, 117, 211, 0.25);
   --default-notification-btn-color: rgb(117, 117, 211, 0.4);
   --headers-color: #000;
+  /* --nav-btn-hover-color: rgb(184, 194, 203, 0.5); */
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 body {
   font-family: "Golos text" sans-serif;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(234, 228, 228, 0.25) !important;
   color: #3a3b3e;
-  overflow-x: scroll;
 }
 h1,
 h2,
@@ -31,37 +35,4 @@ h1 {
 }
 a {
   display: inline-block;
-}
-
-/* .navigation {
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-} */
-.contact-links {
-  color: #000;
-  margin: 0 4px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: all 0.5s;
-}
-
-.navlinks {
-  color: #000;
-  margin: 0 6px;
-  padding: 4px 14px;
-  transition: all 0.5s;
-}
-.navlinks:hover {
-  background-color: rgb(184, 194, 203, 0.5);
-  border-radius: 8px;
-}
-.contact-links:first-child {
-  border-radius: 50%;
-  padding: 7px;
-  /* background-color: red; */
-}
-.contact-links:hover {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid transparent;
 }
