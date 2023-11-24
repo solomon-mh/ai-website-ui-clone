@@ -1,0 +1,29 @@
+.moon-shape {
+  width: 150%; /* Adjust the width as needed */
+  height: -moz-fit-content;
+  height: fit-content; /* Adjust the height as needed */
+  background: linear-gradient(
+    120deg,
+    #586bd9 2%,
+    #4e0575 5%,
+    #4e0575,
+    #0d1d78,
+    #000 45%
+  );
+  /* Set background color */
+  position: relative;
+  left: -25%;
+  border-top-left-radius: 50%; /* Curved bottom left */
+  border-top-right-radius: 50%; /* Curved bottom right */
+  z-index: 100%;
+}
+
+.moon-shape::bemfore {
+  content: "";
+  position: absolute;
+  width: 100%; /* Make the pseudo-element cover the full width of the parent */
+  height: 50%;
+  background-color: #333; /* Set the color to match the background */
+  border-radius: 50%;
+  bottom: 0;
+}
