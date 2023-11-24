@@ -2,7 +2,7 @@ import NotificationHeader from "../../utils/NotificationHeader";
 import imageGenerator from "../../assets/images/image-generator.png";
 const AiImageGenerator = () => {
   return (
-    <div className='grid  grid-cols-2 gap-14 '>
+    <div className='grid md:grid-cols-2 gap-14 '>
       <div className='left-side border-1 rounded-2xl p-8 bg-white'>
         <div className='notf-btn text-black tex-left flex justify-start'>
           <NotificationHeader
