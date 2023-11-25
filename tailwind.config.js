@@ -7,10 +7,9 @@ export default {
       colors: {
         brightRed: "#f26200",
         BrighterRed: "#cc5300",
-        lightRed: "#f2620033",
         simpleLight: "#757575",
         simpleLightGray: "rgb(184, 194, 203, 0.5)",
-        antiquewhite: "rgba(241, 224, 200, 0.754)",
+        veryLightOrange: "#d3c5ac",
       },
       width: {
         "30perc": "30%",
