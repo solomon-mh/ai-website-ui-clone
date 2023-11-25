@@ -4,7 +4,6 @@ import "../styles/component-styling.css";
 import JibyteAiUsers from "./JibyteAiUsers";
 import CustomTemplates from "./CustomTemplates";
 import JiByteTools from "./JiByteTools";
-// import ShowMoreCards from "../utils/ShowMoreCards";
 const FeaturesContainer = () => {
   const activeStyle = {
     background: "white",
@@ -14,10 +13,10 @@ const FeaturesContainer = () => {
     filter: "drop-shadow(0 0 12px #ddd)",
   };
   return (
-    <div>
+    <div id='Features'>
       <Features />
-      <section className='w-90perc m-auto py-20 px-12 border-2 rounded-4xl '>
-        <div className='feature-navs grid md:grid-cols-5 gap-8 my-8'>
+      <section className='mx-6 sm:w-3/4 sm:m-auto md:w-fit md:mx-8 py-20 px-12 md:px-4 border-2 rounded-4xl lg:w-90perc'>
+        <div className='feature-navs grid sm:grid-cols-2 lg:grid-cols-5 gap-8 my-8'>
           <NavLink
             to='/'
             style={({ isActive }) => (isActive ? activeStyle : null)}
