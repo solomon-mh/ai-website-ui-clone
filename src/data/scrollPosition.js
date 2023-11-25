@@ -8,9 +8,17 @@ export const FeaturesPosition = {
 };
 export const HowItWorksPosition = {
   min: 4105,
-  max: 4870,
+  max: 4950,
 };
 export const TesttimonialPosition = {
-  min: 4106,
-  max: 5725,
+  min: 4955,
+  max: 5770,
+};
+export const PricingPosition = {
+  min: 5702,
+  max: 6985,
+};
+export const FaqPosition = {
+  min: 6989,
+  max: 7765,
 };
