@@ -62,7 +62,7 @@
   border-bottom-right-radius: 50%; /* Curved bottom right */
   z-index: 100%;
   background-size: 200% 200%;
-  animation: gradiemnt-animation 25s ease-in-out alternate infinite;
+  animation: gradient-animation 25s ease-in-out alternate infinite;
 }
 
 @keyframes gradient-animation {
