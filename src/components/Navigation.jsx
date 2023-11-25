@@ -9,8 +9,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FeaturesPosition as FP,
+  FaqPosition as FaQP,
   homePosition as HP,
   HowItWorksPosition as HWP,
+  PricingPosition as PP,
+  TesttimonialPosition as TP,
 } from "../data/scrollPosition";
 const Navigation = () => {
   const [scrollPostion, setScrollPosition] = useState(0);
@@ -36,9 +39,6 @@ const Navigation = () => {
       return "transparent";
     }
   };
-  // console.log(Boolean(HP.min < scrollPostion < HP.max));
-  // console.log(Boolean(FP.min < scrollPostion < FP.max));
-  console.log(`SCROLL POSITION: ${scrollPostion}`);
 
   const handleColorChange = () => {
     const scrollTheshold = 50;
@@ -48,6 +48,14 @@ const Navigation = () => {
       return "black";
     }
   };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header>
       <div
@@ -60,9 +68,10 @@ const Navigation = () => {
         <div className='logo'>
           <img src={jibyteLogo} alt='jibyteAI-logo' />
         </div>
-        <div className='navs hidden md:block ml-16'>
+        <div className='navs hidden lg:block ml-16'>
           <nav className=''>
-            <NavLink
+            <button
+              onClick={() => scrollToSection("Hero")}
               className={`${
                 HP.min <= scrollPostion && scrollPostion <= HP.max
                   ? "bg-simpleLightGray"
@@ -71,8 +80,9 @@ const Navigation = () => {
               navlinks`}
             >
               Home
-            </NavLink>
-            <NavLink
+            </button>
+            <button
+              onClick={() => scrollToSection("Features")}
               className={`${
                 FP.min <= scrollPostion && scrollPostion <= FP.max
                   ? "bg-simpleLightGray"
@@ -81,8 +91,9 @@ const Navigation = () => {
               navlinks`}
             >
               Features
-            </NavLink>
-            <NavLink
+            </button>
+            <button
+              onClick={() => scrollToSection("HowItWorks")}
               className={`
             ${
               HWP.min <= scrollPostion && scrollPostion <= HWP.max
@@ -92,13 +103,43 @@ const Navigation = () => {
             navlinks`}
             >
               How it Works
-            </NavLink>
-            <NavLink className='navlinks'>Testimonial</NavLink>
-            <NavLink className='navlinks'>Pricing</NavLink>
-            <NavLink className='navlinks'>FAQ</NavLink>
+            </button>
+            <button
+              onClick={() => scrollToSection("Testimonial")}
+              className={`${
+                TP.min <= scrollPostion && scrollPostion <= TP.max
+                  ? "bg-simpleLightGray"
+                  : ""
+              }
+              navlinks`}
+            >
+              Testimonial
+            </button>
+            <button
+              onClick={() => scrollToSection("Pricing")}
+              className={`${
+                PP.min <= scrollPostion && scrollPostion <= PP.max
+                  ? "bg-simpleLightGray"
+                  : ""
+              }
+              navlinks`}
+            >
+              Pricing
+            </button>
+            <button
+              onClick={() => scrollToSection("FAQ")}
+              className={`${
+                FaQP.min <= scrollPostion && scrollPostion <= FaQP.max
+                  ? "bg-simpleLightGray"
+                  : ""
+              }
+              navlinks`}
+            >
+              FAQ
+            </button>
           </nav>
         </div>
-        <div className='contact-us flex items-center mx-12 md:mx-4'>
+        <div className='contact-us flex items-center mx-12 lg:mx-4'>
           <NavLink className='hidden md:inline-block contact-links border-1 border-black'>
             <FontAwesomeIcon
               icon={faLanguage}
@@ -114,7 +155,7 @@ const Navigation = () => {
         </div>
         <div
           onClick={toggleMenu}
-          className='md:hidden bg-purple-300 bg-opacity-20 text-black text-xl absolute right-8 border-1 border-transparent py-1 px-2.5  rounded-full'
+          className='lg:hidden bg-purple-300 bg-opacity-20 text-black text-xl absolute right-8 border-1 border-transparent py-1 px-2.5  rounded-full'
         >
           {menuOpen ? (
             <FontAwesomeIcon icon={faTimes} />
@@ -124,7 +165,7 @@ const Navigation = () => {
         </div>
       </div>
       {menuOpen && (
-        <div className='md:hidden'>
+        <div className='lg:block'>
           <nav className='overlay bg-slate-700 py-4 text-white flex flex-col'>
             <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
               Home
@@ -144,8 +185,8 @@ const Navigation = () => {
             <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
               FAQ
             </NavLink>
-            <hr className='bg-slate-400 my-2' />
-            <div>
+            <div className='md:hidden'>
+              <hr className='bg-slate-400 my-2' />
               <NavLink className='mx-4 py-1 my-1 px-5'>
                 <FontAwesomeIcon icon={faLanguage} />
                 <span className='mx-2'>Languages</span>
