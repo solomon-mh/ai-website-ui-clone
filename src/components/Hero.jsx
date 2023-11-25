@@ -18,25 +18,24 @@ const Hero = () => {
     return () => clearInterval(intervalId);
   });
   return (
-    <div className='Hero text-white text-center py-44 opacity-90'>
+    <div id='Hero' className='Hero text-white text-center py-44 opacity-90'>
       <NotificationHeader
         name='JiByteAI'
         content='Unleash the power of AI'
         textColor='white'
         bgColor='var(--lighter-blue-notification-btn-color)'
       />
-      <div className='md:w-3/5 m-auto px-12'>
-        <header className='md:w-1/2 m-auto'>
-          <h1 className='text-white text-7.5xl transition-all duration-700'>
+      <div className='m-auto px-12'>
+        <header className='w-3/5 lg:w-1/2 m-auto'>
+          <h1 className='text-white font-extrabold text-6xl sm:text-7.5xl transition-all duration-700'>
             Ultimate AI {functionalities[currentIndex]}
-            <FontAwesomeIcon
-              icon={faBolt}
-              style={{ fontSize: "4rem", marginLeft: "12px" }}
-            />
+            <i className='text-5xl sm:text-6xl px-3'>
+              <FontAwesomeIcon icon={faBolt} />
+            </i>
           </h1>
         </header>
         <article>
-          <p className='w-3/4 text-xl m-auto p-6'>
+          <p className='w-3/4 sm:w-1/2 md:w-1/3 text-xl m-auto p-6'>
             All-in-one platform to generate AI content and start making money in
             minutes.
           </p>
