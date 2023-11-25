@@ -41,7 +41,7 @@ const Pricing = () => {
           {pricing.resources.map((item) => {
             return (
               <div key={item} className='flex gap-6 my-2'>
-                <small className='text-purple-800 border-1 py-0.5 px-1.5 rounded-full bg-purple-100 bg-opacity-80'>
+                <small className='text-purple-800  border-1 py-0.5 px-1.5 rounded-full bg-purple-100 bg-opacity-80'>
                   <FontAwesomeIcon icon={faCheck} />
                 </small>
                 <p>{item}</p>
@@ -53,7 +53,10 @@ const Pricing = () => {
     );
   });
   return (
-    <section className='text-center w-90perc m-auto my-20 pb-12 pt-10 px-10 border-2 rounded-4xl'>
+    <section
+      id='Pricing'
+      className='text-center w-90perc m-auto my-20 pb-12 pt-10 px-10 border-2 rounded-4xl'
+    >
       <div className='py-4'>
         <h1 className='text-2xl md:text-6xl py-6'>Flexible Pricing.</h1>
         <p className='text-lg md:text-xl'>
@@ -101,9 +104,8 @@ const Pricing = () => {
       </div>
       <div
         className={`
-        ${
-          typeFilter == "tokenPacks" ? "bg-red-900" : ""
-        }price-container grid gap-6 md:grid-cols-3`}
+        ${typeFilter == "tokenPacks" ? "bg-red-900" : ""}
+         grid gap-6 md:gap-1 md:grid-cols-3`}
       >
         {membershipTypes}
       </div>
