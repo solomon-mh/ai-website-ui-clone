@@ -19,7 +19,7 @@ const ShowMoreCards = ({ filteredTemplate }) => {
     <>
       <div
         className={`${!showAll ? "opacity-50" : "opacity-100"}
-        card-container grid md:grid-cols-3 gap-4 my-8 transition-all duration-300`}
+        card-container grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 transition-all duration-300`}
       >
         {filteredTemplate.slice(0, visibleCards).map((card, index) => (
           <TemplateCards key={index} cardContent={card} />
