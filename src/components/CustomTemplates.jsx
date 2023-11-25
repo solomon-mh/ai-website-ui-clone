@@ -13,7 +13,7 @@ const CustomTemplates = () => {
     : templates;
 
   return (
-    <div>
+    <div className='m-auto'>
       <div className='btn'>
         <NotificationHeader
           name='Custom'
