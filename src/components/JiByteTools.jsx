@@ -22,7 +22,7 @@ const JiByteTools = () => {
       <p className='text-xl pb-12 font-semibold'>
         Jibyte AI provides all of the tools required to create content.
       </p>
-      <div className='tools-card-container grid md:grid-cols-3 gap-4'>
+      <div className='tools-card-container grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {tools}
       </div>
     </div>
