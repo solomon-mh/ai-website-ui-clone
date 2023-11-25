@@ -25,13 +25,13 @@ const Features = () => {
     );
   });
   return (
-    <div className='text-center px-4  py-24 md:px-12'>
+    <div className='text-center px-4  py-24'>
       <h1 className='text-5xl py-6'>The future of AI.</h1>
       <p className='w-3/4 font-semibold opacity-60  m-auto p-6 text-lg  '>
         Jibyte AI is designed to help you generate high-quality content
         instantly, without breaking a sweat.
       </p>
-      <div className='grid gap-6 md:grid-cols-3 md:gap-12 px-4'>
+      <div className='px-8 grid gap-6 md:px-12  md:grid-cols-2 lg:grid-cols-3 md:gap-12'>
         {listOfFeatures}
       </div>
     </div>
