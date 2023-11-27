@@ -68,7 +68,7 @@ const Pricing = () => {
           onClick={() => handleFilterChange("name", "")}
           className={`
           ${
-            typeFilter == ""
+            typeFilter == null || typeFilter == ""
               ? "bg-white text-black rounded-lg shadow-2xl shadow-slate-900"
               : ""
           }

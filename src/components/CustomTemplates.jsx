@@ -33,7 +33,11 @@ const CustomTemplates = () => {
       </div>
       <div className='template-btns text-sm w-full md:w-90perc m-auto border-1 py-2 flex flex-wrap justify-center rounded-xl'>
         <button
-          className={`${typeFilter === "" ? "selected-template-btn" : ""}
+          className={`${
+            typeFilter == null || typeFilter == ""
+              ? "selected-template-btn"
+              : ""
+          }
           px-2.5 py-1 rounded`}
           onClick={() => setSearchParams({ type: "" })}
         >

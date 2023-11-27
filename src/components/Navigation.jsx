@@ -17,6 +17,8 @@ import {
 } from "../data/scrollPosition";
 const Navigation = () => {
   const [scrollPostion, setScrollPosition] = useState(0);
+  console.log(useState);
+  console.log(setScrollPosition);
   useEffect(() => {
     const handleSCroll = () => {
       setScrollPosition(window.scrollY);
@@ -51,6 +53,7 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    setMenuOpen(false);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -140,19 +143,35 @@ const Navigation = () => {
           </nav>
         </div>
         <div className='contact-us flex items-center mx-12 lg:mx-4'>
-          <NavLink className='hidden md:inline-block contact-links border-1 border-black'>
-            <FontAwesomeIcon
-              icon={faLanguage}
-              style={{ padding: "5px", marginTop: "2px" }}
-            />
-          </NavLink>
-          <NavLink className='contact-links border-1 py-2 px-3 border-gray-400 hover:border-transparent'>
+          <div className='lang'>
+            <button className='lang-btn hidden md:inline-block contact-links border-1 border-black'>
+              <FontAwesomeIcon
+                icon={faLanguage}
+                style={{ padding: "5px", marginTop: "2px" }}
+              />
+            </button>
+            {/* language pop-up */}
+            <div className='lang-pop-up bg-slate-50 text-slate-800 rounded-xl'>
+              <ul>
+                <li className='text-base py-2 px-3 pr-7 hover:bg-slate-200'>
+                  <span className='text-sm mx-1'>uz</span>o&rsquo;zbekcha
+                </li>
+                <hr className='bg-slate-400' />
+                <li className='text-base py-2 px-3 pr-7 hover:bg-slate-200'>
+                  <span className='text-sm mx-1'>GB</span>English
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button className='contact-links border-1 py-2 px-3 border-gray-400 hover:border-transparent'>
             Sign In
-          </NavLink>
-          <NavLink className='contact-links py-2 px-3 border-1 border-gray-400 hover:border-transparent'>
+          </button>
+          <button className='contact-links py-2 px-3 border-1 border-gray-400 hover:border-transparent'>
             Join Hub
-          </NavLink>
+          </button>
         </div>
+
         <div
           onClick={toggleMenu}
           className='lg:hidden bg-purple-300 bg-opacity-20 text-black text-xl absolute right-8 border-1 border-transparent py-1 px-2.5  rounded-full'
@@ -167,24 +186,42 @@ const Navigation = () => {
       {menuOpen && (
         <div className='lg:block'>
           <nav className='overlay bg-slate-700 py-4 text-white flex flex-col'>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            <button
+              onClick={() => scrollToSection("Hero")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               Home
-            </NavLink>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            </button>
+            <button
+              onClick={() => scrollToSection("Features")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               Features
-            </NavLink>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            </button>
+            <button
+              onClick={() => scrollToSection("HowItWorks")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               How it Works
-            </NavLink>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            </button>
+            <button
+              onClick={() => scrollToSection("Testimonial")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               Testimonial
-            </NavLink>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            </button>
+            <button
+              onClick={() => scrollToSection("Pricing")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               Pricing
-            </NavLink>
-            <NavLink className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'>
+            </button>
+            <button
+              onClick={() => scrollToSection("FAQ")}
+              className='mx-4 py-1 my-1 px-5 w-fit hover:bg-gray-600 rounded-xl duration-300'
+            >
               FAQ
-            </NavLink>
+            </button>
             <div className='md:hidden'>
               <hr className='bg-slate-400 my-2' />
               <NavLink className='mx-4 py-1 my-1 px-5'>
