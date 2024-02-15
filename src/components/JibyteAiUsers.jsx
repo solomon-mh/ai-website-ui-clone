@@ -1,5 +1,5 @@
 import { jibyteUsers } from "../data/jibyteUsersData";
-import JiByteUsersBox from "../utils/jiByteUsersBox";
+import JiByteUsersBox from "../utils/JiByteUsersBox";
 
 const JibyteAiUsers = () => {
   const indUsers = jibyteUsers.map((user) => (
