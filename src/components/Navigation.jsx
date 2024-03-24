@@ -18,7 +18,7 @@ import {
 const Navigation = () => {
   const [scrollPostion, setScrollPosition] = useState(0);
   console.log(useState);
-  console.log(setScrollPosition);
+  // console.log(setScrollPosition);
   useEffect(() => {
     const handleSCroll = () => {
       setScrollPosition(window.scrollY);
@@ -153,11 +153,11 @@ const Navigation = () => {
             {/* language pop-up */}
             <div className='lang-pop-up bg-slate-50 text-slate-800 rounded-xl'>
               <ul>
-                <li className='text-base py-2 px-3 pr-7 hover:bg-slate-200'>
+                <li className='text-base cursor-pointer py-2 px-3 pr-7 hover:bg-slate-200'>
                   <span className='text-sm mx-1'>uz</span>o&rsquo;zbekcha
                 </li>
                 <hr className='bg-slate-400' />
-                <li className='text-base py-2 px-3 pr-7 hover:bg-slate-200'>
+                <li className='text-base cursor-pointer py-2 px-3 pr-7 hover:bg-slate-200'>
                   <span className='text-sm mx-1'>GB</span>English
                 </li>
               </ul>
