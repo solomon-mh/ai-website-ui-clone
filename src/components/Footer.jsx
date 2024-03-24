@@ -38,6 +38,16 @@ const Footer = () => {
         </div>
       </div>
       <hr className='w-4/5 h-4 m-auto opacity-40' />
+      <article className='my-3'>
+        <a
+          className='text-blue-700 font-bold'
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://solomommuhye.netlify.app/'
+        >
+          <span>Cloned By: Solomon M.</span>
+        </a>
+      </article>
     </div>
   );
 };
