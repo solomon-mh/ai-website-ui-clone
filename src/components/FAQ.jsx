@@ -27,8 +27,10 @@ const FAQs = () => {
               className='faq-question my-4 py-4 pb-6 border-b-2 flex justify-between'
               onClick={() => toggleAnswer(index)}
             >
-              <p className='text-black sm:text-xl'>{faq.question}</p>
-              <span className='block w-8 h-8 border-1 border-gray-400 bg-white rounded-full'>
+              <p className='text-black sm:text-xl hover:cursor-pointer'>
+                {faq.question}
+              </p>
+              <span className='block cursor-pointer w-8 h-8 border-1 border-gray-400 bg-white rounded-full'>
                 {activeIndex === index ? "-" : "+"}
               </span>
             </div>
