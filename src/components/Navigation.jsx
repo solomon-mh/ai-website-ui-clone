@@ -34,7 +34,6 @@ const Navigation = () => {
 
   const handleBackgroundChange = () => {
     const scrollTheshold = 50;
-    // console.log(scrollPostion);
     if (scrollPostion >= scrollTheshold) {
       return "white";
     } else {
@@ -43,6 +42,7 @@ const Navigation = () => {
   };
 
   const handleColorChange = () => {
+    // changing the nav color when scrolled.
     const scrollTheshold = 50;
     if (scrollPostion <= scrollTheshold) {
       return "white";
