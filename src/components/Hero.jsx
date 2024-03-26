@@ -1,49 +1,59 @@
-import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import NotificationHeader from "../utils/NotificationHeader";
-import { faqs } from "../data/faq";
-const FAQs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAnswer = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+import "../styles/component-styling.css";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+const Hero = () => {
+  const functionalities = ["Chatbot", "Assistant", "Genrator"];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+      if (currentIndex > 1) {
+        setCurrentIndex(0);
+      }
+    }, 2500);
+    // console.log(currentIndex);
+    return () => clearInterval(intervalId);
+  });
   return (
-    <section
-      id='FAQ'
-      className='text-center w-90perc m-auto my-20 pb-12 pt-10 px-4 md:px-10 border-2 rounded-4xl'
-    >
-      <NotificationHeader name='FAQ' content='Help Center' textColor='purple' />
-      <div className='py-4 md:w-3/4 m-auto px-8'>
-        <h1 className='text-2xl md:text-5xl py-6'>Have a question?</h1>
-        <p className='text-sm md:text-xl'>
-          Our support team will get assistance from AI-powered suggestions,
-          making it quicker than ever to handle support requests.
-        </p>
+    <div id='Hero' className='Hero text-white text-center py-44 opacity-90'>
+      <NotificationHeader
+        name='JiByteAI'
+        content='Unleash the power of AI'
+        textColor='white'
+        bgColor='var(--lighter-blue-notification-btn-color)'
+      />
+      <div className='m-auto px-12'>
+        <header className='w-3/5 lg:w-1/2 m-auto'>
+          <h1 className='text-white font-extrabold text-6xl sm:text-7.5xl transition-all duration-700'>
+            Ultimate AI {functionalities[currentIndex]}
+            <i className='text-5xl sm:text-6xl px-3'>
+              <FontAwesomeIcon icon={faBolt} />
+            </i>
+          </h1>
+        </header>
+        <article>
+          <p className='w-3/4 sm:w-1/2 md:w-1/3 text-xl m-auto p-6'>
+            All-in-one platform to generate AI content and start making money in
+            minutes.
+          </p>
+        </article>
+        <div className='hero-button'>
+          <button className='font-sans font-bold my-6 py-4 px-8 rounded-xl transition-all duration-500 bg-slate-800 hover:bg-black hover:scale-105'>
+            <span>
+              <FontAwesomeIcon icon={faBolt} style={{ marginRight: "10px" }} />
+            </span>
+            Start Making Money.
+          </button>
+        </div>
+        <div className='text-blue-200 features my-4 hover:text-white'>
+          <Link to='#features'>Discover Jibyte AI</Link>
+        </div>
       </div>
-      <div>
-        {faqs.map((faq, index) => (
-          <div key={faq.id} className='faq-item md:mx-24'>
-            <div
-              className='faq-question my-4 py-4 pb-6 border-b-2 flex justify-between'
-              onClick={() => toggleAnswer(index)}
-            >
-              <p className='text-black sm:text-xl hover:cursor-pointer'>
-                {faq.question}
-              </p>
-              <span className='block cursor-pointer w-8 h-8 border-1 border-gray-400 bg-white rounded-full'>
-                {activeIndex === index ? "-" : "+"}
-              </span>
-            </div>
-            {activeIndex === index && (
-              <div className='faq-answer text-xs sm:text-base text-left'>
-                {faq.answer}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default FAQs;
+export default Hero;
