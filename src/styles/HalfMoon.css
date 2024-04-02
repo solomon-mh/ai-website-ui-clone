@@ -17,7 +17,7 @@
   z-index: 100%;
 }
 
-.moon-shape::bemfore {
+/* .moon-shape::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -25,4 +25,4 @@
   background-color: #333;
   border-radius: 50%;
   bottom: 0;
-}
+} */
