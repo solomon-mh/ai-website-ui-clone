@@ -8,7 +8,7 @@ const Features = () => {
         key={feature.id ? feature.id : crypto.randomUUID()}
         className='features'
       >
-        <div className='feature box-border flex items-center gap-5'>
+        <div className='feature cursor-pointer  box-border flex items-center gap-5'>
           <div className='transition-bg duration-200 feature-icon px-4 py-3 h-fit rounded-md hover:text-white hover:scale-200'>
             <FontAwesomeIcon icon={feature.icon} />
           </div>
