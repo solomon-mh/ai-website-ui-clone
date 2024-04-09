@@ -22,7 +22,7 @@ const FAQs = () => {
       </div>
       <div>
         {faqs.map((faq, index) => (
-          <div key={faq.id} className='faq-item md:mx-24'>
+          <div key={faq.id} className='faq-item cursor-pointer md:mx-24'>
             <div
               className='faq-question my-4 py-4 pb-6 border-b-2 flex justify-between'
               onClick={() => toggleAnswer(index)}
