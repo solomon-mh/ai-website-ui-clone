@@ -2,37 +2,37 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 * {
-  margin: 0;
-  box-sizing: border-box;
+	margin: 0;
+	box-sizing: border-box;
 }
 :root {
-  --notification-btn-color: rgba(221, 160, 221, 0.3);
-  --lighter-blue-notification-btn-color: rgba(98, 98, 211);
-  --notification-default-text-color: navy;
-  --notification-btn-color-two: rgb(117, 117, 211, 0.25);
-  --default-notification-btn-color: rgb(117, 117, 211, 0.4);
-  --headers-color: #000;
-  /* --nav-btn-hover-color: rgb(184, 194, 203, 0.5); */
+	--notification-btn-color: rgba(221, 160, 221, 0.3);
+	--lighter-blue-notification-btn-color: rgba(98, 98, 211);
+	--notification-default-text-color: navy;
+	--notification-btn-color-two: rgb(117, 117, 211, 0.25);
+	--default-notification-btn-color: rgb(117, 117, 211, 0.4);
+	--headers-color: #000;
+	/* --nav-btn-hover-color: rgb(184, 194, 203, 0.5); */
 }
 body::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 body {
-  font-family: "Golos text" sans-serif;
-  background-color: rgba(234, 228, 228, 0.25) !important;
-  color: #3a3b3e;
+	font-family: "Montserrat", sans-serif !important;
+	background-color: rgba(234, 228, 228, 0.25) !important;
+	color: #3a3b3e;
 }
 h1,
 h2,
 h3 {
-  color: var(--headers-color);
+	color: var(--headers-color);
 }
 h1 {
-  font-family: sans-serif;
-  color: black;
-  font-weight: bolder;
-  line-height: 78px;
+	font-family: "Montserrat", sans-serif;
+	color: black;
+	font-weight: bolder;
+	line-height: 78px;
 }
 a {
-  display: inline-block;
+	display: inline-block;
 }
