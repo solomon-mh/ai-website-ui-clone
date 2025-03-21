@@ -15,8 +15,11 @@ const Footer = () => {
 				</p>
 			</div>
 			<div className="div md:w-1/3 m-auto text-white">
-				<h1 className="text-7xl text-white py-4">
-					<span className="opacity-70">Sta</span>rt your free plan.
+				<h1 className="text-7xl bg-gradient-to-t from-slate-950 to-gray-100 bg-clip-text text-transparent py-4">
+					<span className="bg-gradient-to-r from-slate-800 to-slate-200 bg-clip-text text-transparent">
+						Start
+					</span>{" "}
+					your free plan.
 				</h1>
 				<p className="opacity-60">
 					Unlock your business potential by letting the AI work and generate
