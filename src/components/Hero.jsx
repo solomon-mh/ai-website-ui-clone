@@ -15,7 +15,7 @@ const Hero = () => {
 			if (currentIndex > 1) {
 				setCurrentIndex(0);
 			}
-		}, 2500);
+		}, 3000);
 		// console.log(currentIndex);
 		return () => clearInterval(intervalId);
 	});
@@ -32,7 +32,7 @@ const Hero = () => {
 					<h1 className="text-white font-extrabold text-6xl sm:text-7.5xl transition-all duration-700">
 						Ultimate AI {functionalities[currentIndex]}
 						<span className="text-5xl inline-block sm:text-6xl">
-							<CgBolt className="inline" size={72} />
+							<CgBolt className="inline text-white -mt-4" size={80} />
 						</span>
 					</h1>
 				</header>
